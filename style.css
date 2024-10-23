@@ -19,7 +19,6 @@
             color: #333;
         }
 
-        /* 맵 이미지 컨테이너: 이미지 크기를 반응형으로 만들기 위해 relative */
         .map-container {
             position: relative;
             width: 100%;
@@ -27,13 +26,12 @@
             margin: 0 auto;
         }
 
-        /* 행사 안내도 이미지: 화면 크기에 맞게 자동 조정 */
         .map-container img {
             width: 100%;
             height: auto;
+            loading: lazy; /* 이미지 로딩 최적화 */
         }
 
-        /* 버튼 기본 스타일 */
         .button {
             position: absolute;
             padding: 10px;
@@ -46,31 +44,11 @@
             transform: translate(-50%, -50%);
         }
 
-        /* 청룡존 버튼: 위치를 퍼센트로 지정 (맵 좌표에 맞추어 설정) */
-        .cheongryong-btn {
-            top: 8%;  /* 이미지의 5% 아래 */
-            left: 44%;  /* 이미지의 22% 오른쪽 */
-        }
+        .cheongryong-btn { top: 8%; left: 44%; }
+        .joojok-btn { top: 60%; left: 53%; }
+        .hyeonmu-btn { top: 79%; left: 56%; }
+        .baekho-btn { top: 65%; left: 27%; }
 
-        /* 주작존 버튼 */
-        .joojok-btn {
-            top: 60%;
-            left: 53%;
-        }
-
-        /* 현무존 버튼 */
-        .hyeonmu-btn {
-            top: 79%;
-            left: 56%;
-        }
-
-        /* 백호존 버튼 */
-        .baekho-btn {
-            top: 65%;
-            left: 27%;
-        }
-
-        /* 반응형 디자인: 작은 화면일 때 버튼 크기 및 폰트 크기 조정 */
         @media (max-width: 600px) {
             .button {
                 padding: 8px;
@@ -82,20 +60,13 @@
 <body>
     <h1>행사 안내도</h1>
     <div class="map-container">
-        <!-- 행사 안내도 이미지 -->
         <img src="images/event-map.png" alt="행사 안내도">
 
-        <!-- 청룡존 버튼 -->
-        <button class="button cheongryong-btn" onclick="location.href='cheongryong.html'">청룡존</button>
-
-        <!-- 주작존 버튼 -->
-        <button class="button joojok-btn" onclick="location.href='joojok.html'">주작존</button>
-
-        <!-- 현무존 버튼 -->
-        <button class="button hyeonmu-btn" onclick="location.href='hyeonmu.html'">현무존</button>
-
-        <!-- 백호존 버튼 -->
-        <button class="button baekho-btn" onclick="location.href='baekho.html'">백호존</button>
+        <button class="button cheongryong-btn" aria-label="청룡존" onclick="location.href='cheongryong.html'">청룡존</button>
+        <button class="button joojok-btn" aria-label="주작존" onclick="location.href='joojok.html'">주작존</button>
+        <button class="button hyeonmu-btn" aria-label="현무존" onclick="location.href='hyeonmu.html'">현무존</button>
+        <button class="button baekho-btn" aria-label="백호존" onclick="location.href='baekho.html'">백호존</button>
     </div>
 </body>
 </html>
+
