@@ -4,21 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>행사 안내</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 전체 페이지 기본 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* 맵 이미지 컨테이너: relative로 설정하여 자식 요소인 버튼의 위치를 설정 */
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* 이미지의 최대 크기 지정 */
+            margin: 0 auto; /* 중앙 정렬 */
+        }
+
+        /* 이미지: 반응형으로 크기 조정 */
+        .map-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 버튼 기본 스타일 */
+        .button {
+            position: absolute;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 청룡존 버튼: 좌표는 퍼센트로 지정하여 반응형으로 조정 가능 */
+        .cheongryong-btn {
+            top: 18%;  /* 이미지 상단에서 18% */
+            left: 42%; /* 이미지 왼쪽에서 42% */
+        }
+
+        /* 주작존 버튼 */
+        .joojok-btn {
+            top: 57%;
+            left: 55%;
+        }
+
+        /* 현무존 버튼 */
+        .hyeonmu-btn {
+            top: 65%;
+            left: 75%;
+        }
+
+        /* 백호존 버튼 */
+        .baekho-btn {
+            top: 30%;
+            left: 20%;
+        }
+
+        /* 반응형 디자인: 작은 화면일 때 버튼 크기 및 폰트 크기 조정 */
+        @media (max-width: 600px) {
+            .button {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>행사 안내도</h1>
     <div class="map-container">
-        <!-- 행사 안내도 이미지 삽입 -->
+        <!-- 행사 안내도 이미지 -->
         <img src="images/event-map.png" alt="행사 안내도">
 
-        <div class="buttons">
-            <!-- 청룡존, 주작존, 현무존, 백호존 버튼 추가 -->
-            <button onclick="location.href='cheongryong.html'">청룡존</button>
-            <button onclick="location.href='joojok.html'">주작존</button>
-            <button onclick="location.href='hyeonmu.html'">현무존</button>
-            <button onclick="location.href='baekho.html'">백호존</button>
-        </div>
+        <!-- 청룡존 버튼 -->
+        <button class="button cheongryong-btn" onclick="location.href='cheongryong.html'">청룡존</button>
+
+        <!-- 주작존 버튼 -->
+        <button class="button joojok-btn" onclick="location.href='joojok.html'">주작존</button>
+
+        <!-- 현무존 버튼 -->
+        <button class="button hyeonmu-btn" onclick="location.href='hyeonmu.html'">현무존</button>
+
+        <!-- 백호존 버튼 -->
+        <button class="button baekho-btn" onclick="location.href='baekho.html'">백호존</button>
     </div>
 </body>
 </html>
