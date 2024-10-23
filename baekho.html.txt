@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백호존</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>백호존</h1>
+    <div class="image-container">
+        <!-- 백호존 이미지 삽입 -->
+        <img src="images/baekho.png" alt="백호존 이미지">
+    </div>
+    <p>백호존에 대한 설명이 여기에 들어갑니다.</p>
+    <button onclick="location.href='index.html'">메인 페이지로 돌아가기</button>
+</body>
+</html>
